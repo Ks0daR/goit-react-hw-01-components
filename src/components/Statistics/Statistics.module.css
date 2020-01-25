@@ -1,1 +1,20 @@
-.statistics
+.statistics{
+    margin: 0;
+    padding: 0;
+    width: 500px;
+    height: auto;
+   text-align: center;
+   text-transform: uppercase;
+}
+.statList{
+    list-style: none;
+    display: flex;
+    background-color: aqua;
+    justify-content: space-around;
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    text-transform: lowercase;
+}

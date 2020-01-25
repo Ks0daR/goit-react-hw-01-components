@@ -5,7 +5,6 @@ import styles from './Profile.module.css';
 function Profile({ user }) {
   const { name, tag, location, avatar } = user;
   const { followers, views, likes } = user.stats;
-  console.log(typeof user.stats)
   return (
     <div className={styles.profile}>
       <div className={styles.description}>
