@@ -1,0 +1,31 @@
+.profile {
+  width: 300px;
+  height: auto;
+  border: 1px solid #222;
+}
+
+.description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.avatar {
+  border-radius: 50%;
+}
+
+.stats {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  background-color: #bbb;
+}
+
+.statsItem {
+    padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+}
