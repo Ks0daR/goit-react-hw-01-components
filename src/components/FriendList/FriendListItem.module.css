@@ -1,0 +1,18 @@
+.item {
+  display: flex;
+  width: 300px;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid gray;
+  box-shadow: -10px 0px 0px red;
+  margin: 10px;
+}
+
+.name {
+  padding-left: 25px;
+  font-family: sans-serif;
+}
+.online {
+  composes: item;
+  box-shadow: -10px 0px 0px green;
+}

@@ -1,11 +1,10 @@
 import React from 'react';
 import FriendListItem from './FriendListItem';
 
-function FriendList({ avatar, name, isOnline }) {
-  console.log(avatar);
+function FriendList({ friends }) {
   return (
-    <ul class="friend-list">
-      <FriendListItem friends={avatar} />
+    <ul className="friend-list">
+      <FriendListItem friends={friends} />
     </ul>
   );
 }

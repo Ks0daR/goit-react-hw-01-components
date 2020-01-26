@@ -3,7 +3,6 @@ import styles from './Statistics.module.css';
 import PropTypes from 'prop-types';
 
 function RenderData({ stats }) {
-  console.log(stats)
   return (
     <ul className={styles.statList}>
       {stats.map(item => (
@@ -17,11 +16,13 @@ function RenderData({ stats }) {
 }
 
 RenderData.propTypes = {
-  stats: PropTypes.exact({
-    id: PropTypes.string.isRequired,
-    label: PropTypes.string.isRequired,
-    percentage: PropTypes.number.isRequired,
-  }).isRequired,
+  stats: PropTypes.arrayOf(
+    PropTypes.exact({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    }),
+  ).isRequired,
 };
 
 export default RenderData;

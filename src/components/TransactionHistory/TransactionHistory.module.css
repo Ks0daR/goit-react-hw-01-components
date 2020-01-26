@@ -1,0 +1,27 @@
+.transactionHistory {
+  width: 600px;
+  table-layout: fixed;
+  text-align: center;
+  padding: 6px 0;
+}
+
+th,
+td {
+  padding: 10px;
+  border-radius: 5px;
+}
+th{
+    background-color: chartreuse;
+}
+td:nth-child(1) {
+  background-color: bisque;
+}
+
+
+td:nth-child(2) {
+  background-color: aquamarine;
+}
+
+td:nth-child(3) {
+  background-color: bisque;
+}
