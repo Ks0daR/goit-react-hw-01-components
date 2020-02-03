@@ -1,10 +1,12 @@
 import React from 'react';
+import ProfileFollowers from './ProfileFollowers';
+import ProfileViews from './ProfileViews';
+import ProfileLikes from './ProfileLikes';
 import PropTypes from 'prop-types';
 import styles from './Profile.module.css';
 
-function Profile({ user }) {
-  const { name, tag, location, avatar } = user;
-  const { followers, views, likes } = user.stats;
+function Profile({ name, tag, location, avatar, stats }) {
+  const { followers, views, likes } = stats;
   return (
     <div className={styles.profile}>
       <div className={styles.description}>
@@ -15,45 +17,19 @@ function Profile({ user }) {
       </div>
 
       <ul className={styles.stats}>
-        <li className={styles.statsItem}>
-          <span className="label">Followers</span>
-          <span className="quantity">{followers}</span>
-        </li>
-        <li className={styles.statsItem}>
-          <span className="label">Views</span>
-          <span className="quantity">{views}</span>
-        </li>
-        <li className={styles.statsItem}>
-          <span className="label">Likes</span>
-          <span className="quantity">{likes}</span>
-        </li>
+        <ProfileFollowers followers={followers} />
+        <ProfileViews views={views} />
+        <ProfileLikes likes={likes} />
       </ul>
     </div>
   );
 }
 
-Profile.defaultProps = {
-  avatar:
-    'https://i.pinimg.com/originals/a0/40/66/a04066a2d1fcf25df39c599e093995c8.jpg',
-  name: 'Petra Marica',
-  location: 'Salvador, Brasil',
-  stats: {
-    followers: 0,
-    views: 0,
-    likes: 0,
-  }
-};
-
 Profile.propTypes = {
-  avatar: PropTypes.string,
+  avatar: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  tag: PropTypes.string,
+  tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
-  stats: PropTypes.exact({
-      followers: PropTypes.number.isRequired,
-      views: PropTypes.number.isRequired,
-      likes: PropTypes.number.isRequired,
-    }).isRequired,
 };
 
 export default Profile;

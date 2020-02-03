@@ -1,19 +1,19 @@
 import React from 'react';
-import RenderData from './RenderData'
+import StatisticList from './StatisticList';
 import PropTypes from 'prop-types';
 import styles from './Statistics.module.css';
 
-function Statistics({ title, data }) {
+function Statistics({ title, stats }) {
   return (
     <section className={styles.statistics}>
       {title && <h2 className="title">{title}</h2>}
-      <RenderData stats={data} />
+      <StatisticList stats={stats} />
     </section>
   );
 }
 
 Statistics.propTypes = {
   title: PropTypes.string,
-}
+};
 
 export default Statistics;
