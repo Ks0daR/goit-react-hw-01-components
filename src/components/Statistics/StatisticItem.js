@@ -1,14 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './Statistics.module.css';
+import generateRandomColor from './generateRandomColor';
 
-function StatisticItem({ stats }) {
-  return stats.map(item => (
-    <li key={item.id} className={styles.item}>
-      <span className="label">{item.label}</span>
-      <span className="percentage">{item.percentage}</span>
+function StatisticItem({ label, percentage  }) {
+  const styledItem = {
+    width: '50px',
+    height: '50px',
+    display: 'flex',
+    textAlign: 'center',
+    flexDirection: 'column',
+    textTransform: 'lowercase',
+  };
+  return (
+    <li
+      style={{ ...styledItem, backgroundColor: generateRandomColor() }}
+    >
+      <span className="label">{label}</span>
+      <span className="percentage">{percentage}</span>
     </li>
-  ));
+  )
 }
 
 StatisticItem.propTypes = {

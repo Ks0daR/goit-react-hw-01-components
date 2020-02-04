@@ -10,7 +10,7 @@ function Profile({ name, tag, location, avatar, stats }) {
   return (
     <div className={styles.profile}>
       <div className={styles.description}>
-        <img src={avatar} alt="user avatar" className={styles.avatar} />
+        <img src={avatar} alt={name} className={styles.avatar} />
         <p className="name">{name}</p>
         <p className="tag">@{tag}</p>
         <p className="location">{location}</p>

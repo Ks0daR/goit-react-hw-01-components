@@ -9,12 +9,6 @@
 .statList{
     list-style: none;
     display: flex;
-    background-color: aqua;
     justify-content: space-around;
-}
-
-.item{
-    display: flex;
-    flex-direction: column;
-    text-transform: lowercase;
+    color: #fff;
 }

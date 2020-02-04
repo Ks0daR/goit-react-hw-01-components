@@ -5,7 +5,9 @@ import styles from './Statistics.module.css';
 function StatisticList({ stats }) {
   return (
     <ul className={styles.statList}>
-      <StatisticItem stats={stats} />
+      {stats.map(({ id, label, percentage }) => (
+        <StatisticItem key={id} label={label} percentage={percentage} />
+      ))}
     </ul>
   );
 }
